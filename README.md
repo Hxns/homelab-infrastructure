@@ -28,9 +28,9 @@ El entorno de computación se distribuye en tres ordenadores principales. Cada e
 
 <br>
 
-### 🖥️ Ordenador 1: Nodo Principal
+### 🖥️ Ordenador 1: Mini PC HP T620
 
-Este equipo es el músculo principal de la infraestructura, encargado de manejar las cargas de trabajo más intensas y la virtualización principal.
+Su función exclusiva es repartir los recursos físicos (CPU, RAM, disco) para crear, alojar y gestionar de forma aislada todas las máquinas virtuales de la red de víctimas.
 
 <div align="center">
   <img src="img/Ordenador-1.jpeg" alt="Ordenador 1" width="400px" style="border-radius: 10px; box-shadow: 0px 4px 10px rgba(0,0,0,0.5);">
@@ -39,16 +39,30 @@ Este equipo es el músculo principal de la infraestructura, encargado de manejar
 #### 🛠️ Especificaciones Técnicas
 | Componente | Detalle |
 | :--- | :--- |
-| **Procesador (CPU)** | `[ Escribe aquí el procesador, ej: Intel Core i7 ]` |
-| **Memoria RAM** | `[ Escribe aquí la RAM, ej: 64GB DDR4 ]` |
-| **Almacenamiento** | `[ Escribe aquí el almacenamiento, ej: 2TB NVMe ]` |
-| **Rol / Sistema Operativo**| `[ Ej: Hypervisor Proxmox VE / Ubuntu Server ]` |
+| **Procesador (CPU)** | `AMD Ryzen Embedded R1305G` |
+| **Memoria RAM** | `8GB DDR4` |
+| **Almacenamiento** | `250 GB SSD` |
+| **Rol / Sistema Operativo**| `Proxmox VE` |
 
 <br>
 
-### 🖥️ Ordenador 2: Nodo Secundario
+### 🖥️ Ordenador 2: Raspberry Pi 4 B
 
-Un nodo ideal para almacenamiento masivo o despliegue de contenedores que no requieren la misma potencia bruta que el nodo principal.
+Su función es ser la máquina anfitriona que mantiene encendidos y operativos todos los servicios críticos de infraestructura, como el filtrado de DNS y los sensores de detección de intrusos.
+
+#### 🛠️ Especificaciones Técnicas
+| Componente | Detalle |
+| :--- | :--- |
+| **Procesador (CPU)** | `ARM Cortex-A72` |
+| **Memoria RAM** | `4GB DDR4` |
+| **Almacenamiento** | `64 GB MicroSD` |
+| **Rol / Sistema Operativo**| `Raspberry Pi OS Lite` |
+
+<br>
+
+### 🖥️ Ordenador 3: ASUS - Old Model
+
+Su función es ser la máquina anfitriona que mantiene encendidos y operativos todos los servicios críticos de infraestructura, como el filtrado de DNS y los sensores de detección de intrusos.
 
 <div align="center">
   <img src="img/Ordenador-2.jpeg" alt="Ordenador 2" width="400px" style="border-radius: 10px; box-shadow: 0px 4px 10px rgba(0,0,0,0.5);">
@@ -57,16 +71,16 @@ Un nodo ideal para almacenamiento masivo o despliegue de contenedores que no req
 #### 🛠️ Especificaciones Técnicas
 | Componente | Detalle |
 | :--- | :--- |
-| **Procesador (CPU)** | `[ Escribe aquí el procesador ]` |
-| **Memoria RAM** | `[ Escribe aquí la RAM ]` |
-| **Almacenamiento** | `[ Escribe aquí el almacenamiento ]` |
-| **Rol / Sistema Operativo**| `[ Ej: NAS TrueNAS / Docker Compose ]` |
+| **Procesador (CPU)** | `Intel Core i5-4570` |
+| **Memoria RAM** | `16 GB DD` |
+| **Almacenamiento** | `500 GB SSD` |
+| **Rol / Sistema Operativo**| `Kali Purple` |
 
 <br>
 
-### 🖥️ Ordenador 3: Nodo Edge y Experimentación
+### 🖥️ Ordenador 4: ASUS - New Model
 
-Este equipo de bajo consumo es excelente para servicios 24/7 de alta disponibilidad, domótica (Home Assistant) o como servidor DNS (Pi-hole).
+Funciona como la "base de operaciones" del atacante, albergando todo el arsenal ofensivo necesario para lanzar escaneos, probar exploits y comprometer a los equipos de la columna verde.
 
 <div align="center">
   <img src="img/Ordenador-3.jpeg" alt="Ordenador 3" width="400px" style="border-radius: 10px; box-shadow: 0px 4px 10px rgba(0,0,0,0.5);">
@@ -75,13 +89,10 @@ Este equipo de bajo consumo es excelente para servicios 24/7 de alta disponibili
 #### 🛠️ Especificaciones Técnicas
 | Componente | Detalle |
 | :--- | :--- |
-| **Procesador (CPU)** | `[ Escribe aquí el procesador ]` |
-| **Memoria RAM** | `[ Escribe aquí la RAM ]` |
-| **Almacenamiento** | `[ Escribe aquí el almacenamiento ]` |
-| **Rol / Sistema Operativo**| `[ Ej: Debian Server / K3s ]` |
+| **Procesador (CPU)** | `Intel Core i5-1235U` |
+| **Memoria RAM** | `32 GB DDR5` |
+| **Almacenamiento** | `2 TB SSD` |
+| **Rol / Sistema Operativo**| `Kali Linux` |
 
 ---
 
-<div align="center">
-  <i>Documentación creada para mantener el registro, mantenimiento y escalabilidad de la infraestructura.</i>
-</div>
